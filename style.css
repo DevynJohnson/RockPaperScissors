@@ -32,7 +32,7 @@ header h2 {
 }
 
 main {
-    padding: 300px 0px;
+    padding: 275px 0px;
 }
 
 .background {
@@ -52,7 +52,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 20px;
     border: var(--border);
     background-color: var(--backgroundColor);
     border-radius: 10px;
@@ -71,7 +71,7 @@ main {
 }
 
 .scoreboard p {
-    font-size: 36px;
+    font-size: 24px;
     text-shadow: var(--textOutline);
     color: var(--white);
     padding: 10px;
@@ -120,7 +120,8 @@ footer a {
     text-decoration: none;
     color: white;
 }
+
 footer a:hover {
-    color: blue;
+    color: lightblue;
 }
 
