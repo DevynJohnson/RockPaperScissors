@@ -46,30 +46,30 @@ function checkResults(userChoice, computerChoice) {
     //     userPaper++;
     // } else if (userChoice ==='S') {
     //     userScissors++;
-    if (userChoice ==='R' && computerChoice ==='S') {
+     if (userChoice ==='R' && computerChoice ==='S') {
         console.log('Win');
         userWin++;
-        // userRock++;
+        userRock++;
     } else if (userChoice ==='P' && computerChoice ==='R') {
         console.log('Win');
         userWin++;
-        // userPaper++;
+        userPaper++;
     } else if (userChoice ==='S' && computerChoice ==='P') {
         console.log('Win');
         userWin++;
-        // userScissors++;
+        userScissors++;
     } else if (userChoice ==='R' && computerChoice ==='P') {
         console.log('Loss');
         userLoss++;
-        // userRock++;
+        userRock++;
     } else if (userChoice ==='P' && computerChoice ==='S') {
         console.log('Loss');
         userLoss++;
-        // userPaper++;
+        userPaper++;
     } else if (userChoice ==='S' && computerChoice ==='R') {
         console.log('Loss');
         userLoss++;
-        // userScissors++;
+        userScissors++;
     } else if (userChoice === computerChoice) {
         userTie++;
     }
@@ -78,11 +78,10 @@ function checkResults(userChoice, computerChoice) {
     
 
 function userEntry() {
-    const userPick = prompt('Type R, P, or S').toUpperCase();
-    if (userPick === null) {
+    const userPick = prompt('Type R, P, or S')
+    if (userPick === null || undefined) {
         alert('Game Cancelled. Please type R, P or S to play.')
-    }
-    if (userPick !== 'R' && userPick !== 'P' && userPick !== 'S') {
+    } else if (userPick !== 'R' && userPick !== 'P' && userPick !== 'S') {
         alert('Invalid Selection. Please Type R, P, or S to play.');
         return userEntry(); // Ask again if invalid
     } else {
@@ -100,25 +99,31 @@ function userEntry() {
     function runGame() {
         const userPick = userEntry();
         const computerPick = computerEntry();
-        console.log(userPick, computerPick);
+        console.log('Game on!');
+        console.log(`You chose ${userPick}, the computer chose ${computerPick}`);
+        console.log(`You chose rock ${userRock} times, paper ${userPaper} times, and scissors ${userScissors} times.`);
+        console.log(`You have won ${userWin} times, lost ${userLoss} times, and tied ${userTie} times.`)
         checkResults(userPick, computerPick);
+        // return new Promise((resolve) => {
+        //     resolve();
+        // })
     }
 
-    runGame();
+
+    // runGame();
     
 
     function displayResults () {
-
-        if (userWin++) {
+        if (userChoice ==='R' && computerChoice ==='S'|| (userChoice ==='P' && computerChoice==='R' || (userChoice ==='S' && computerChoice ==='P'))) {
             alert('You Win! Congratulations!')
-        } else if (userLoss++) {
+        } else if (userChoice ==='R' && computerChoice ==='P'|| (userChoice ==='P' && computerChoice==='S' || (userChoice ==='S' && computerChoice ==='R'))) {
             alert('You Lose! Better Luck Next Time.')
         } else {
             alert("It's a tie! Try again!")
         } 
     }
 
-    displayResults ();
+    // displayResults ();
 
 
 

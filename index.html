@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,33 @@
     <link rel="stylesheet" href="./style.css">
     <title>Rock, Paper, Scissors Showdown</title>
 </head>
+
 <body>
     <header>
-    <h1>Welcome to the Thunderdome!</h1>
-    <h2>Test your wits against the computer in Rock, Paper, Scissors.</h2>
+        <h1>Welcome to the Thunderdome!</h1>
+        <h2>Test your wits against the computer in Rock, Paper, Scissors.</h2>
     </header>
+    <main class="background">
 
-    <section class="flexContainer">
-    <div class="scoreboard" id="userScoreboard">
-        <h2>User Score</h2>
-    </div>
+        <div class="flexContainer">
+            <div class="scoreboard" id="userScoreboard">
+                <h2 class="scoreboardHeader">User Score</h2>
+            </div>
 
-    <div class="scoreboard" id="userScoreboard">
-        <h2>Computer Score</h2>
-    </div>
-    </section>
+            <div class="startButton" id="startGame">
+                <button id="pushToStart" onclick="runGame().displayResults()"><h2>Press here to start game!</h2></button>
+            </div>
+
+            <div class="scoreboard" id="userScoreboard">
+                <h2 class="scoreboardHeader">Computer Score</h2>
+            </div>
+        </div>
+   
+    </main>
+    <footer>
+        Made by Devyn Johnson | <a href=" https://github.com/DevynJohnson"target="_blank">Github</a> | <a href="https://devynjohnson.github.io/online-portfolio/" target="_blank">Portfolio</a>
+    </footer>
 
 </body>
+
 </html>
