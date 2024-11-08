@@ -94,6 +94,14 @@ main {
     padding: 15px;
 }
 
+#resultMessage {
+    font-size: 24px;
+    color: var(--white);
+    text-shadow: var(--textOutline);
+    text-align: center;
+    margin-top: 20px;
+}
+
 #pushToStart {
     padding: 15px;
     background-color: var(--backgroundColor);
