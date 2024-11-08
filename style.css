@@ -9,22 +9,25 @@
 header {
     background-color: lightslategray;
     color: white;
+    border-bottom: 5px solid black;
+    padding: 10px;
+}
+
+header h1,
+header h2 {
+    padding: 5px;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+main {
+    padding: 300px 0px;
 }
 
 .background {
     background-image: url(./Assets/BoxingRing.jpg);
     background-size: cover;
 }
-
-h1 {
-    text-align: center;
-    text-shadow: 2px 2px black;
-}
-
-h2 {
-    text-align: center;
-}
-
 
 .flexContainer {
     display: flex;
@@ -35,10 +38,35 @@ h2 {
 }
 
 .scoreboard {
-    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
     border: 5px solid black;
     background-color: lightslategray;
     border-radius: 10px;
+    justify-content: space-between;
+}
+
+.scoreboard h2 {
+    flex-basis: 2;
+    justify-content: center;
+    width: 100%;
+}
+
+.scores {
+    justify-content: left;
+    align-items: center;
+    padding: 10px;    
+}
+
+.scoreboard p {
+    font-size: 18px;
+}
+
+.choices {
+    justify-content: right;
+    padding: 10px;
 }
 
 
@@ -74,9 +102,10 @@ footer {
     text-align: center;
     font-size: 24px;
     font-weight: 400;
-    padding: 50px;
+    padding: 25px;
     background-color: lightslategrey;
     color: white;
+    border-top: 5px solid black;
 }
 
 footer a {
