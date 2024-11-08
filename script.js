@@ -70,9 +70,23 @@ function checkResults(userChoice, computerChoice) {
         console.log('Loss');
         userLoss++;
         userScissors++;
-    } else if (userChoice === computerChoice) {
+    // } else if (userChoice === computerChoice) {
+    //     userTie++;
+    // }
+
+    } else if (userChoice ==='R' && computerChoice ==='R') {
+        console.log('Win');
         userTie++;
-    }
+        userRock++;
+    } else if (userChoice ==='P' && computerChoice ==='P') {
+        console.log('Win');
+        userTie++;
+        userPaper++;
+    } else if (userChoice ==='S' && computerChoice ==='S') {
+        console.log('Win');
+        userTie++;
+        userScissors++;
+}
 }
    
     
@@ -101,12 +115,9 @@ function userEntry() {
         const computerPick = computerEntry();
         console.log('Game on!');
         console.log(`You chose ${userPick}, the computer chose ${computerPick}`);
-        console.log(`You chose rock ${userRock} times, paper ${userPaper} times, and scissors ${userScissors} times.`);
-        console.log(`You have won ${userWin} times, lost ${userLoss} times, and tied ${userTie} times.`)
-        checkResults(userPick, computerPick);
-        // return new Promise((resolve) => {
-        //     resolve();
-        // })
+        console.log(`You have chosen rock ${userRock} times, paper ${userPaper} times, and scissors ${userScissors} times.`);
+        console.log(`You have won ${userWin} times, lost ${userLoss} times, and tied ${userTie} times.`);
+        // checkResults(userPick, computerPick);
     }
 
 
