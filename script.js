@@ -97,6 +97,7 @@ function computerEntry() {
 
 function runGame() {
     const userPick = userEntry();
+    // const dispButtons = document.getElementById("rpsContainer");
     if (userPick === null) return; // Exit if user canceled
     const computerPick = computerEntry();
     
