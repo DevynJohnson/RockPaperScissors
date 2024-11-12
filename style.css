@@ -105,23 +105,30 @@ main {
     padding: 20px;
 }
 
+.rpsContainer img {
+    cursor: pointer;
+}
+
 .rps {
     border: var(--border);
     border-radius: 10px;
     line-height: 0;
-    display: none;
 }
 
 
 
 
 
-#resultMessage {
+#resultsMessage {
     font-size: 24px;
     color: var(--white);
+    border: var(--border);
     text-shadow: var(--textOutline);
     text-align: center;
-    margin-top: 20px;
+    margin: 20px auto;
+    background-color: var(--backgroundColor);
+    padding: 20px;
+    width: 50%;
 }
 
 #pushToStart {

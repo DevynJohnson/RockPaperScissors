@@ -77,7 +77,7 @@ function checkResults(userChoice, computerChoice) {
 }
 
 function userEntry() {
-    const userPick = prompt('Type R, P, or S');
+    // const userPick = prompt('Type R, P, or S');
     if (userPick === null || userPick === undefined) {
         alert('Game Cancelled. Please type R, P or S to play.');
         return null;
@@ -96,19 +96,37 @@ function computerEntry() {
 }
 
 function runGame() {
-    const userPick = userEntry();
-    // const dispButtons = document.getElementById("rpsContainer");
-    if (userPick === null) return; // Exit if user canceled
+    // const userPick = userEntry();
+    document.querySelector(".rpsContainer").style.display = "flex";
+    // if (userPick === null) return; // Exit if user canceled
     const computerPick = computerEntry();
+    console.log(`Computer chose ${computerPick}`);
+    window.computerPick = computerPick; // Store computer choice for later use
+ } 
     
-    console.log(`You chose ${userPick}, the computer chose ${computerPick}`);
-    checkResults(userPick, computerPick); // Check the result
+    // console.log(`You chose ${userPick}, the computer chose ${computerPick}`);
+    // checkResults(userPick, computerPick); // Check the result
+    // updateScoreDisplay(); // Update the score display on the HTML page
+    // displayResults(userPick, computerPick); // Display the result in an alert
+
+
+function userChoice(choice) {
+    console.log(`userChoice called with choice: ${choice}`); // Debugging log
+    // Hide choices after selection
+    document.querySelector(".rpsContainer").style.display = "none";
+
+    // Retrieve the computer's choice and proceed with the game
+    const comptuerPick = window.computerPick; // Get stored computer choice
+    console.log(`You chose: ${choice}, the computer chose: ${comptuerPick}`);
+
+    checkResults(choice, comptuerPick); // Check the result
     updateScoreDisplay(); // Update the score display on the HTML page
-    displayResults(userPick, computerPick); // Display the result in an alert
-}
+    displayResults(choice, comptuerPick);
+ } // Display the result in an alert
 
 function displayResults(userChoice, computerChoice) {
-    const resultMessage = document.getElementById('resultMessage');
+    const resultMessage = document.getElementById('resultsMessage');
+    document.getElementById('resultsMessage').style.display = 'block';
     
     if ((userChoice === 'R' && computerChoice === 'S') ||
         (userChoice === 'P' && computerChoice === 'R') ||
@@ -134,6 +152,3 @@ function updateScoreDisplay() {
     document.querySelector('#userChoices p:nth-child(2)').textContent = `Paper: ${userPaper}`;
     document.querySelector('#userChoices p:nth-child(3)').textContent = `Scissors: ${userScissors}`;
 }
-
-// Start the game
-// runGame();
