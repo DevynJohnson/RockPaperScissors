@@ -18,10 +18,14 @@
     <main class="background">
         <div class="rules">
             <h1>Game Rules:</h1>
-            <h2>You select rock, paper, or scissors while the computer does the same.</h2>
-            <h2>Rock defeats scissors. Paper defeats rock. Scissors defeats paper.</h2>
-            <h2>Wins, losses, and ties are recorded and displayed below along with the amount of times you have selected rock, paper or scissors.</h2>
+            <h2>Press the buttont to start. Click or tap the rock, paper or scissor images to make your selection. The computer will randomly generate a selection.</h2>
+            <h2>Rock defeats scissors. Paper defeats rock. Scissors defeats paper. The same selection results in a tie.</h2>
+            <h2>Your score is displayed below alongside your rock, paper or scissor selections.</h2>
             <h2>Good luck!</h2>
+        </div>
+        
+        <div class="startButton" id="startGame">
+            <button id="pushToStart" onclick="runGame()"><h2>Press here to play!</h2></button>
         </div>
 
         <div class="flexContainer">
@@ -39,9 +43,6 @@
                     </div>  
             </div>
 
-            <div class="startButton" id="startGame">
-                <button id="pushToStart" onclick="runGame()"><h2>Press here to play!</h2></button>
-            </div>
             
             <!-- Removed computer scoreboard as it is unnecessary, the computer score will just mirror user score. Will expand size of user scoreboard instead and move button below it. -->
             <!-- <div class="scoreboard" id="computerScoreboard">
