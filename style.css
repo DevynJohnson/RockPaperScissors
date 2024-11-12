@@ -98,7 +98,7 @@ main {
 }
 
 .scoreboard p {
-    font-size: 36px;
+    font-size: 24px;
     text-shadow: var(--textOutline);
     color: var(--white);
     padding: 10px;
@@ -115,8 +115,8 @@ main {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: var(--white);
     text-shadow: var(--textShadow);
-    font-size: 62px;
-    padding: 15px;
+    font-size: 36px;
+    padding: 10px;
 }
 
 /* Container holding rock, paper and scissor images */
@@ -161,7 +161,9 @@ main {
     border: var(--border);
     border-radius: 10px;
     max-width: 100%;
-    margin: 10px;
+    margin: 20px auto;
+    text-align: center;
+
 }
 
 #pushToStart:hover {
