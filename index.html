@@ -27,7 +27,18 @@
         <div class="startButton" id="startGame">
             <button id="pushToStart" onclick="runGame()"><h2>Press here to play!</h2></button>
         </div>
-
+        
+        <div class="rpsContainer" style="display: none">
+            <div class="rps" id="rock">
+                <img src="./Assets/rock.jpg" alt="rock" onclick="userChoice('R')" height="200px" width="300px">
+            </div>
+            <div class="rps" id="paper">
+                <img src="./Assets/paper.jpg" alt="paper" onclick="userChoice('P')" height="200px" width="300px">
+            </div>
+            <div class="rps" id="scissors">
+                <img src="./Assets/scissors.jpg" alt="scissors" onclick="userChoice('S')" height="200px" width="300px">
+            </div>
+        </div>
         <div class="flexContainer">
             <div class="scoreboard" id="userScoreboard">
                 <h2 class="scoreboardHeader">Your Score</h2>
@@ -60,17 +71,6 @@
             </div> -->
         </div>
         <div id="resultsMessage" style="display: none"></div>
-        <div class="rpsContainer" style="display: none">
-            <div class="rps" id="rock">
-                <img src="./Assets/rock.jpg" alt="rock" onclick="userChoice('R')" height="200px" width="300px">
-            </div>
-            <div class="rps" id="paper">
-                <img src="./Assets/paper.jpg" alt="paper" onclick="userChoice('P')" height="200px" width="300px">
-            </div>
-            <div class="rps" id="scissors">
-                <img src="./Assets/scissors.jpg" alt="scissors" onclick="userChoice('S')" height="200px" width="300px">
-            </div>
-        </div>
 
     </main>
     <footer>
