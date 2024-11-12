@@ -100,7 +100,7 @@ function runGame() {
     document.querySelector(".rpsContainer").style.display = "flex";
     // if (userPick === null) return; // Exit if user canceled
     const computerPick = computerEntry();
-    console.log(`Computer chose ${computerPick}`);
+    // console.log(`Computer chose ${computerPick}`);
     window.computerPick = computerPick; // Store computer choice for later use
  } 
     

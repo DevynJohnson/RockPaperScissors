@@ -6,8 +6,6 @@
 --backgroundColor: rgb(15, 126, 93);
 --black: #000000;
 --white: #ffffff;
-
-
 }
 
 
@@ -24,15 +22,14 @@ header {
     padding: 10px;
 }
 
-header h1,
-header h2 {
-    padding-bottom: 10px;
+header h1 {
     text-align: center;
-    text-shadow: var(--textOutline)
+    text-shadow: var(--textOutline);
+    font-size: 48px;
 }
 
 main {
-    padding: 275px 0px;
+    padding: 100px 0px;
 }
 
 .background {
@@ -46,6 +43,26 @@ main {
     justify-content: space-between;
     text-align: center;
     align-items: center; 
+}
+
+.rules {
+    text-align: center;
+    color: var(--white);
+    background-color: var(--backgroundColor);
+    border: var(--border);
+    border-radius: 10px;
+    width: 75%;
+    display: block;
+    margin: auto auto;
+}
+
+.rules h1, h2 {
+    text-shadow: var(--textOutline);
+    padding: 10px;
+}
+
+.rules h3 {
+    font-size: 22px;
 }
 
 .scoreboard {
@@ -115,14 +132,11 @@ main {
     line-height: 0;
 }
 
-
-
-
-
 #resultsMessage {
     font-size: 24px;
     color: var(--white);
     border: var(--border);
+    border-radius: 10px;
     text-shadow: var(--textOutline);
     text-align: center;
     margin: 20px auto;
@@ -162,4 +176,6 @@ footer a {
 footer a:hover {
     color: lightblue;
 }
+
+
 
