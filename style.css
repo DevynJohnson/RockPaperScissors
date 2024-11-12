@@ -58,11 +58,11 @@ main {
 
 .rules h1, h2 {
     text-shadow: var(--textOutline);
-    padding: 10px;
 }
 
-.rules h3 {
-    font-size: 22px;
+.rules h2 {
+    font-size: 18px;
+    padding: 5px;
 }
 
 .scoreboard {
@@ -101,9 +101,6 @@ main {
     padding: 10px;
 }
 
-#pushToStart:hover {
-    background-color: var(--highlightColor);
-}
 
 .scoreboard h2 {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -113,6 +110,7 @@ main {
     padding: 15px;
 }
 
+/* Container holding rock, paper and scissor images */
 .rpsContainer {
     display: flex;
     flex-direction: row;
@@ -122,16 +120,15 @@ main {
     padding: 20px;
 }
 
-.rpsContainer img {
-    cursor: pointer;
-}
-
+/* Rock, paper and scissor images */
 .rps {
     border: var(--border);
     border-radius: 10px;
     line-height: 0;
+    cursor: pointer;
 }
 
+/* Message that appears after game is completed */
 #resultsMessage {
     font-size: 24px;
     color: var(--white);
@@ -145,6 +142,7 @@ main {
     width: 50%;
 }
 
+/* Button to start game */
 #pushToStart {
     padding: 15px;
     background-color: var(--backgroundColor);
@@ -155,6 +153,10 @@ main {
     border-radius: 10px;
     max-width: 100%;
     margin: 10px;
+}
+
+#pushToStart:hover {
+    background-color: var(--highlightColor);
 }
 
 footer {
@@ -177,5 +179,10 @@ footer a:hover {
     color: lightblue;
 }
 
-
+/* Media Queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .rpsContainer {
+        flex-direction: column;
+    }
+}
 
