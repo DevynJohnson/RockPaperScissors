@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Defered Javascript -->
     <script defer src="./script.js"></script>
+    <!-- CSS Reset -->
     <link rel="stylesheet" href="./normalize.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./style.css">
     <title>Rock, Paper, Scissors Showdown</title>
 </head>
@@ -16,6 +19,7 @@
     </header>
 
     <main class="background">
+        <!-- This section will have the rules of the game contained within a div -->
         <div class="rules">
             <h1>Game Rules:</h1>
             <h2>Press the button to start. Click or tap the rock, paper or scissor images to make your selection. The computer will randomly generate a selection.</h2>
@@ -24,10 +28,14 @@
             <h2>Good luck!</h2>
         </div>
         
+        <!-- This section will have the start button -->
         <div class="startButton" id="startGame">
             <button id="pushToStart" onclick="runGame()"><h2>Press here to play!</h2></button>
         </div>
-        
+        <!-- This div has content added through JS, will display outcome of game to user after it has run -->
+        <div id="resultsMessage" style="display: none"></div>
+
+        <!-- This section will have the rock, paper, scissors images contained within a div -->
         <div class="rpsContainer" style="display: none">
             <div class="rps" id="rock">
                 <img src="./Assets/rock.jpg" alt="rock" onclick="userChoice('R')" height="200px" width="300px">
@@ -39,6 +47,8 @@
                 <img src="./Assets/scissors.jpg" alt="scissors" onclick="userChoice('S')" height="200px" width="300px">
             </div>
         </div>
+
+        <!-- This section will have the user scoreboard and tallied selections contained within a div -->
         <div class="flexContainer">
             <div class="scoreboard" id="userScoreboard">
                 <h2 class="scoreboardHeader">Your Score</h2>
@@ -51,7 +61,12 @@
                         <p>Rock:</p>
                         <p>Paper:</p>
                         <p>Scissors:</p>
-                    </div>  
+                    </div>
+
+                    <!-- This section will contain a top 10 leaderboard calculated by win percentage -->
+                <!-- <div class="leaderboard" id="top10">
+                    <h2>Top 10</h2>
+                </div>   -->
             </div>
 
             
@@ -70,7 +85,6 @@
                 </div>
             </div> -->
         </div>
-        <div id="resultsMessage" style="display: none"></div>
 
     </main>
     <footer>
