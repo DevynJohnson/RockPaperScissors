@@ -76,21 +76,21 @@ function checkResults(userChoice, computerChoice) {
     }
 }
 
-function userEntry() { // Ask user for input, now selected by clicking an image - removed prompt as user no longer types selection
-    // const userPick = prompt('Type R, P, or S');
-    if (userPick === null || userPick === undefined) {
-        alert('Game Cancelled. Please type R, P or S to play.');
-        return null;
-    } else if (userPick !== 'R' && userPick !== 'P' && userPick !== 'S') {
-        alert('Invalid Selection. Please Type R, P, or S to play.');
-        return userEntry(); // Recursively ask again if invalid
-    } else {
-        return userPick;
-    }
-}
+// function userEntry() { // Ask user for input, now selected by clicking an image - removed prompt as user no longer types selection
+//     // const userPick = prompt('Type R, P, or S');
+//     if (userPick === null || userPick === undefined) {
+//         alert('Game Cancelled. Please type R, P or S to play.');
+//         return null;
+//     } else if (userPick !== 'R' && userPick !== 'P' && userPick !== 'S') {
+//         alert('Invalid Selection. Please Type R, P, or S to play.');
+//         return userEntry(); // Recursively ask again if invalid
+//     } else {
+//         return userPick;
+//     }
+// }
 
 function computerEntry() { // Randomly generate computer choice
-    const options = ['R', 'P', 'S'];
+    const options = ['Rock', 'Paper', 'Scissors'];
     const randomIndex = Math.floor(Math.random() * 3);  // Fix the range here (0-2)
     return options[randomIndex];
 }
@@ -121,16 +121,16 @@ function displayResults(userChoice, computerChoice) { // Display the result of t
     const resultMessage = document.getElementById('resultsMessage');
     document.getElementById('resultsMessage').style.display = 'block'; // Display the results message, resultsMessage has initial display set to none
     
-    if ((userChoice === 'R' && computerChoice === 'S') ||
-        (userChoice === 'P' && computerChoice === 'R') ||
-        (userChoice === 'S' && computerChoice === 'P')) {
-        resultMessage.textContent = 'You Win! Congratulations!';
-    } else if ((userChoice === 'R' && computerChoice === 'P') ||
-               (userChoice === 'P' && computerChoice === 'S') ||
-               (userChoice === 'S' && computerChoice === 'R')) {
-        resultMessage.textContent = 'You Lose! Better Luck Next Time.';
+    if ((userChoice === 'Rock' && computerChoice === 'Scissors') ||
+        (userChoice === 'Paper' && computerChoice === 'Rock') ||
+        (userChoice === 'Scissors' && computerChoice === 'Paper')) {
+        resultMessage.textContent = ` You chose ${userChoice} and the computer selected ${computerChoice}. You Win!`;
+    } else if ((userChoice === 'Rock' && computerChoice === 'Paper') ||
+               (userChoice === 'Paper' && computerChoice === 'Scissors') ||
+               (userChoice === 'Scissors' && computerChoice === 'Rock')) {
+        resultMessage.textContent = `You chose ${userChoice} and the computer selected ${computerChoice}. You Lose!`;
     } else {
-        resultMessage.textContent = "It's a tie! Try again!";
+        resultMessage.textContent = `You both chose ${userChoice}. It's a tie! Try again!`;
     }
 }
 
