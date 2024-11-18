@@ -245,16 +245,76 @@ footer a:hover {
 
 /* Media Queries for smaller screens */
 @media screen and (max-width: 768px) {
+
     .headerBox {
         flex-direction: column;
     }
-    
+
+    header p {
+        padding: 10px;
+        font-size: 36px;
+    }
+
+    .rules {
+        font-size: 16px;
+    }
+
+    #pressToStart {
+        font-size: 24px;
+    }
+
     .rpsContainer {
         flex-direction: column;
     }
 
-    .rps {
-        padding: 10px;
+    footer,
+    footer a {
+        font-size: 14px;
+    }
+
+@media screen and (max-width: 700px) {
+    header p {
+        font-size: 12px;
+    }
+
+    .rules {
+        font-size: 12px;
+    }
+
+    #pressToStart {
+        font-size: 12px;
+    }
+
+    .rpsContainer {
+        flex-direction: column;
+    }
+
+    footer,
+    footer a {
+        font-size: 12px;
     }
 }
+}
 
+@media screen and (max-width: 450px) {
+    header p {
+        font-size: 8px;
+    }
+
+    .rules {
+        font-size: 10px;
+    }
+
+    #pressToStart {
+        font-size: 10px;
+    }
+
+    .rpsContainer {
+        flex-direction: column;
+    }
+
+    footer,
+    footer a {
+        font-size: 10px;
+    }
+}
