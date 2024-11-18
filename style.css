@@ -245,6 +245,10 @@ footer a:hover {
 
 /* Media Queries for smaller screens */
 @media screen and (max-width: 768px) {
+    .headerBox {
+        flex-direction: column;
+    }
+    
     .rpsContainer {
         flex-direction: column;
     }
