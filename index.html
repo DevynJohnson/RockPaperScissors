@@ -15,17 +15,19 @@
 
 <body>
     <header>
-        <h1>Rock, Paper, Scissors Game</h1>
-    </header>
-
+        <div class="headerBox">
+            <p id="headerRock">Rock,</p><p id="headerPaper">Paper,</p><p id="headerScissors">Scissors</p>
+        </div>
+        </header>
+        
     <main class="background">
         <!-- This section will have the rules of the game contained within a div -->
         <div class="rules">
-            <h1>Game Rules:</h1>
-            <h2>Press the button to start. Click or tap the rock, paper or scissor images to make your selection. The computer will randomly generate a selection.</h2>
-            <h2>Rock defeats scissors. Paper defeats rock. Scissors defeats paper. The same selection results in a tie.</h2>
-            <h2>Your score is displayed below alongside your rock, paper or scissor selections.</h2>
-            <h2>Good luck!</h2>
+            <h2>Game Rules:</h2>
+            <p>Press the button to start. Select rock, paper, or scissors. The computer randomly generates a selection.</p>
+            <p>Rock defeats scissors. Paper defeats rock. Scissors defeats paper. Identical selections is a tie.</p>
+            <p>Your score is displayed below.</p>
+            <p>Good luck!</p>
         </div>
         
         <!-- This section will have the start button -->
@@ -38,13 +40,13 @@
         <!-- This section will have the rock, paper, scissors images contained within a div -->
         <div class="rpsContainer" style="display: none">
             <div class="rps" id="rock">
-                <img src="./Assets/rock.jpg" alt="rock" onclick="userChoice('Rock')" height="200px" width="300px">
+                <img src="./Assets/rock.jpg" alt="rock" onclick="userChoice('rock')" height="200px" width="300px">
             </div>
             <div class="rps" id="paper">
-                <img src="./Assets/paper.jpg" alt="paper" onclick="userChoice('Paper')" height="200px" width="300px">
+                <img src="./Assets/paper.jpg" alt="paper" onclick="userChoice('paper')" height="200px" width="300px">
             </div>
             <div class="rps" id="scissors">
-                <img src="./Assets/scissors.jpg" alt="scissors" onclick="userChoice('Scissors')" height="200px" width="300px">
+                <img src="./Assets/scissors.jpg" alt="scissors" onclick="userChoice('scissors')" height="200px" width="300px">
             </div>
         </div>
 

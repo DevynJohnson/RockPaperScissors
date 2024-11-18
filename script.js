@@ -43,39 +43,40 @@ let userScissors = 0;
 
 
 function checkResults(userChoice, computerChoice) {
-    if (userChoice === 'R' && computerChoice === 'S') {
+    if (userChoice === 'rock' && computerChoice === 'scissors') {
         console.log('Win');
         userWin++;
         userRock++;
-    } else if (userChoice === 'P' && computerChoice === 'R') {
+    } else if (userChoice === 'paper' && computerChoice === 'rock') {
         console.log('Win');
         userWin++;
         userPaper++;
-    } else if (userChoice === 'S' && computerChoice === 'P') {
+    } else if (userChoice === 'scissors' && computerChoice === 'paper') {
         console.log('Win');
         userWin++;
         userScissors++;
-    } else if (userChoice === 'R' && computerChoice === 'P') {
+    } else if (userChoice === 'rock' && computerChoice === 'paper') {
         console.log('Loss');
         userLoss++;
         userRock++;
-    } else if (userChoice === 'P' && computerChoice === 'S') {
+    } else if (userChoice === 'paper' && computerChoice === 'scissors') {
         console.log('Loss');
         userLoss++;
         userPaper++;
-    } else if (userChoice === 'S' && computerChoice === 'R') {
+    } else if (userChoice === 'scissors' && computerChoice === 'rock') {
         console.log('Loss');
         userLoss++;
         userScissors++;
     } else {
         console.log('Tie');
         userTie++;
-        if (userChoice === 'R') userRock++;
-        else if (userChoice === 'P') userPaper++;
-        else if (userChoice === 'S') userScissors++;
+        if (userChoice === 'rock') userRock++;
+        else if (userChoice === 'paper') userPaper++;
+        else if (userChoice === 'scissors') userScissors++;
     }
 }
 
+// This section has been commented out as user no longer types selection, but instead clicks an image
 // function userEntry() { // Ask user for input, now selected by clicking an image - removed prompt as user no longer types selection
 //     // const userPick = prompt('Type R, P, or S');
 //     if (userPick === null || userPick === undefined) {
@@ -90,7 +91,7 @@ function checkResults(userChoice, computerChoice) {
 // }
 
 function computerEntry() { // Randomly generate computer choice
-    const options = ['Rock', 'Paper', 'Scissors'];
+    const options = ['rock', 'paper', 'scissors'];
     const randomIndex = Math.floor(Math.random() * 3);  // Fix the range here (0-2)
     return options[randomIndex];
 }
@@ -121,13 +122,13 @@ function displayResults(userChoice, computerChoice) { // Display the result of t
     const resultMessage = document.getElementById('resultsMessage');
     document.getElementById('resultsMessage').style.display = 'block'; // Display the results message, resultsMessage has initial display set to none
     
-    if ((userChoice === 'Rock' && computerChoice === 'Scissors') ||
-        (userChoice === 'Paper' && computerChoice === 'Rock') ||
-        (userChoice === 'Scissors' && computerChoice === 'Paper')) {
+    if ((userChoice === 'rock' && computerChoice === 'scissors') ||
+        (userChoice === 'paper' && computerChoice === 'rock') ||
+        (userChoice === 'scissors' && computerChoice === 'paper')) {
         resultMessage.textContent = ` You chose ${userChoice} and the computer selected ${computerChoice}. You Win!`;
-    } else if ((userChoice === 'Rock' && computerChoice === 'Paper') ||
-               (userChoice === 'Paper' && computerChoice === 'Scissors') ||
-               (userChoice === 'Scissors' && computerChoice === 'Rock')) {
+    } else if ((userChoice === 'rock' && computerChoice === 'paper') ||
+               (userChoice === 'paper' && computerChoice === 'scissors') ||
+               (userChoice === 'scissors' && computerChoice === 'rock')) {
         resultMessage.textContent = `You chose ${userChoice} and the computer selected ${computerChoice}. You Lose!`;
     } else {
         resultMessage.textContent = `You both chose ${userChoice}. It's a tie! Try again!`;
