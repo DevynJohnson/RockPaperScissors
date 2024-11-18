@@ -1,6 +1,22 @@
+@font-face {
+    font-family: "Rock";
+    src: url(./Assets/Jfrocksolid-5avL.ttf);
+}
+
+@font-face {
+    font-family: "Paper";
+    src: url(./Assets/StrokeDimension-vXK7.ttf);
+}
+
+@font-face {
+    font-family: "Scissors";
+    src: url(./Assets/BladeKnightItalic-m2Y7x.otf);
+}
+
 /* Set variables for commonly used values */
 :root { 
 --textOutline: 2px 2px #000000;
+--textOutlineWhite: 2px 2px #c2c2c2;
 --textShadow: 5px 5px 5px #000000;
 --border: 5px solid #000000;
 --highlightColor: rgb(37, 163, 153);
@@ -24,10 +40,39 @@ header {
     padding: 10px;
 }
 
+.headerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 /* Header text */
-header h1 {
+header p {
     text-align: center;
     text-shadow: var(--textOutline);
+    padding: 30px;
+}
+
+#headerRock {
+    font-family: "Rock", sans-serif;
+    src: url(./Assets/Jfrockoutcrop-z9Ma.ttf);    
+    font-size: 48px;
+    color: rgb(85, 84, 84);
+}
+
+#headerPaper {
+    font-family: "Paper", sans-serif;
+    src: url(./Assets/PaperTowel-djVx.ttf);
+    font-size: 64px;
+}
+
+#headerScissors {
+    font-family: "Scissors", sans-serif;
+    src: url(./Assets/BladeKnightItalic-m2Y7x.otf);
+    font-size: 45px;
+    text-shadow: var(--textOutlineWhite);
+    color: rgb(133, 133, 133);
 }
 
 /* Main content section */
@@ -59,13 +104,14 @@ main {
 }
 
 /* Game Rules main header text */
-.rules h1 {
+.rules h2 {
     text-shadow: var(--textOutline);
     text-decoration: underline;
+    padding: 5px;
 }
 
 /* Game Rules body text */
-.rules h2 {
+.rules p {
     text-shadow: var(--textOutline);
     font-size: 18px;
     padding: 5px;
@@ -140,7 +186,7 @@ main {
 /* User selections */
 .choices {
     justify-content: right;
-    padding: 10px;
+    padding: 5px;
 }
 
 /* Container holding rock, paper and scissor images */
@@ -149,8 +195,8 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin: 20px;
-    padding: 20px;
+    margin: 5px;
+    padding: 5px;
 }
 
 /* Rock, paper and scissor images */
