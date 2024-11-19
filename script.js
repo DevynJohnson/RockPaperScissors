@@ -1,22 +1,22 @@
 // How is Rock, Paper, Scissors played?
-// User chooses Rock (R), Paper (P), or Scissors (S)
-// Computer chooses R, P, or S
+// User chooses rock, paper, or scissors
+// Computer chooses rock, paper, or scissors
 // Outcome conditions: Win, Lose, or Tie
 
 // Win conditions:
-// IF User chooses R, computer S
-// IF User chooses P, computer R
-// IF User chooses S, computer P
+// IF User chooses rock, computer scissors
+// IF User chooses paper, computer rock
+// IF User chooses scissors, computer paper
 
 // Lose conditions:
-// IF User chooses R, computer P
-// IF User chooses P, computer S
-// IF User chooses S, computer R
+// IF User chooses rock, computer paper
+// IF User chooses paper, computer scissors
+// IF User chooses scissors, computer rock
 
 // Tie conditions:
-// IF User chooses R, computer R
-// IF User chooses P, computer P
-// IF User chooses S, computer S
+// IF User chooses rock, computer rock
+// IF User chooses paper, computer paper
+// IF User chooses scissors, computer scissors
 
 // IF Win
 // Win score ++
@@ -116,6 +116,7 @@ function userChoice(choice) {
     checkResults(choice, comptuerPick); // Check the result to determine outcome
     updateScoreDisplay(); // Update the score display on the HTML page
     displayResults(choice, comptuerPick); // Display the result on HTML page
+    calcWinP(); // Calculate win % after at least 5 games and log it to local storage
 }
 
 function displayResults(userChoice, computerChoice) { // Display the result of the game on DOM inside the div with id 'resultsMessage'
@@ -134,6 +135,26 @@ function displayResults(userChoice, computerChoice) { // Display the result of t
         resultMessage.textContent = `You both chose ${userChoice}. It's a tie! Try again!`;
     }
 }
+
+// Calculate win % and log it to local storage
+
+
+function calcWinP() {
+    let totalGames = (userWin + userLoss + userTie);
+    let winP = (userWin / totalGames) * 100; // Multiply by 100 to get percentage
+	
+    if (totalGames >= 5) {
+        localStorage.setItem('highScore', JSON.stringify(winP));
+        
+    let highScore = JSON.parse(localStorage.getItem('highScore'));
+	document.getElementById('highScore').textContent = `Your highest win percentage after at least 5 games is ${highScore.toFixed(1)}% with ${userWin} wins out of ${totalGames} games.` 
+	} else if (totalGames === 1) {
+	document.getElementById('highScore').textContent = `You must play at least 5 games to log a high score. You have played ${totalGames} game so far.`;
+    } else {
+    document.getElementById('highScore').textContent = `You must play at least 5 games to log a high score. You have played ${totalGames} games so far.`;                
+    }
+};
+
 
 function updateScoreDisplay() { // Update the score display on DOM
     // Update User Scores

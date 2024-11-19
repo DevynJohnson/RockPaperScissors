@@ -53,7 +53,7 @@
         <!-- This section will have the user scoreboard and tallied selections contained within a div -->
         <div class="flexContainer">
             <div class="scoreboard" id="userScoreboard">
-                <h2 class="scoreboardHeader">Your Score</h2>
+                <h2 class="scoreboardHeader">Current Score</h2>
                     <div class="scores" id="userScores">
                         <p>Wins:</p>
                         <p>Losses:</p>
@@ -64,35 +64,41 @@
                         <p>Paper:</p>
                         <p>Scissors:</p>
                     </div>
-
+                
                     <!-- This section will contain a top 10 leaderboard calculated by win percentage -->
-                <!-- <div class="leaderboard" id="top10">
-                    <h2>Top 10</h2>
-                </div>   -->
-            </div>
-
-            
-            <!-- Removed computer scoreboard as it is unnecessary, the computer score will just mirror user score. Will expand size of user scoreboard instead and move button below it. -->
-            <!-- <div class="scoreboard" id="computerScoreboard">
-                <h2 class="scoreboardHeader">Computer Score</h2>
-                <div class="scores" id="computerScores">
-                    <p>Wins:</p>
-                    <p>Losses:</p>
-                    <p>Ties:</p>
+                    <!-- <div class="leaderboard" id="top10">
+                        <h2>Top 10</h2>
+                    </div>   -->
                 </div>
-                <div class="choices" id="computerChoices">
-                    <p>Rock:</p>
-                    <p>Paper:</p>
-                    <p>Scissors:</p>
-                </div>
+                
+                
+                <!-- Removed computer scoreboard as it is unnecessary, the computer score will just mirror user score. Will expand size of user scoreboard instead and move button below it. -->
+                <!-- <div class="scoreboard" id="computerScoreboard">
+                    <h2 class="scoreboardHeader">Computer Score</h2>
+                    <div class="scores" id="computerScores">
+                        <p>Wins:</p>
+                        <p>Losses:</p>
+                        <p>Ties:</p>
+                    </div>
+                    <div class="choices" id="computerChoices">
+                        <p>Rock:</p>
+                        <p>Paper:</p>
+                        <p>Scissors:</p>
+                    </div>
             </div> -->
+        </div>
+        
+        <div class="highScoreContainer">
+            <h2>Your High Score</h2>
+            <p id="highScore">You must play at least 5 games to log a high score.</p>
         </div>
 
     </main>
+
     <footer>
         Made by Devyn Johnson. Click the links to see more! &#x2192; | <a href=" https://github.com/DevynJohnson"target="_blank">Github</a> | <a href="https://devynjohnson.github.io/online-portfolio/" target="_blank">Portfolio</a>
     </footer>
-
+    
 </body>
 
 </html>
